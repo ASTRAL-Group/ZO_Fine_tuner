@@ -1,0 +1,1 @@
+WANDB_MODE=disabled CUDA_VISIBLE_DEVICES=0 NEED_NORMALIZATION=True LOAD_FLOAT_16=False LR_MLP=0.1 EPOCH=15  LR_UPDATE=1e-6 TRAIN_MODE='l2l' EPOCHS_PER_RESTART=5 MODEL=meta-llama/Llama-3.2-1B TASK=Copa LR_LLM=0.01  SAVE_MLP_PATH='./learned_finetuner/llama1B_finetuner.pth' bash ./scripts/l2l.sh
