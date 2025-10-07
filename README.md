@@ -1,5 +1,10 @@
 # Learning a Zeroth-Order Optimizer for Fine-Tuning LLM
+
+[![Arxiv](https://img.shields.io/badge/arXiv-2506.01356-B31B1B.svg?logo=arxiv)](https://arxiv.org/pdf/2510.00419)
+
 ![Methodology](figures/methodology.png)
+
+Official Implementation of ["Improving Data Efficiency for LLM Reinforcement Fine-tuning Through Difficulty-targeted Online Data Selection and Rollout Replay"](https://arxiv.org/pdf/2510.00419).
 
 In the foundation-model era, most downstream models derive from a small set of base checkpoints, making it efficient to learn an optimizer once per base model and reuse it across many tasks. Moreover, doing so in the zeroth-order setting preserves near-inference compute and memory costs, greatly improving the accessibility of model customization. To this end, we propose ZO Fine-tuner, a learning-based zeroth-order optimizer that augments the standard two-point ZO update with learned, adaptive, and non-uniform perturbations. Guided by our theoretical analysis, ZO Fine-tuner achieves minimal memory overhead by sharing a single perturbation variance within each parameter group. Trained once under a learning-to-learn objective for a given base LLM, the same finetuner transfers across diverse tasks and derivative checkpoints, enabling a practical “train once, reuse widely” workflow. Experiments on 4 LLMs ranging from 1B to 30B and 7 diverse datasets show that ZO Fine-tuner outperforms prior zeroth-order baselines in 23/28 of the task-model combinations in terms of final loss and achieves an average of 2.5% improvement in accuracy compared to MeZO, thereby demonstrating strong performance and scalability for efficient LLM fine-tuning.
 
